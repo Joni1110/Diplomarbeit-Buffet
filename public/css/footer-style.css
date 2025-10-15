@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+
+.footer{
+    display: flex;
+    background-color: #dd0835;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    padding: 20px;
+    gap: 80px;
+    bottom: 0;
+}
+
+.footer a{
+    display: flex;
+    color: #fff;
+    text-decoration: none;
+    font-family: Raleway;
+    font-size: clamp(12px, 1vw, 16px);
+    font-weight: bold;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.footer a:hover{
+    transform: scale(1.05);
+    text-decoration: underline;
+
+}
+
+footer a::after {
+    height: 3px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+
+
+
+

@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Raleway, sans-serif;
+}
+
+
+
+body {
+    display: flex;
+    height: 100vh;
+}
+
+/* Linke Seite */
+.left {
+    width: 40%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.logo img{
+    display: block;
+    margin: 0px auto;
+}
+
+.login-box {
+    width: 70%;
+    max-width: 300px;
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.forgot {
+    font-size: 12px;
+    color: #dd0835;
+    margin-bottom: 15px;
+    display: block;
+    text-align: left;
+    text-decoration: none;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #dd0835;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.register {
+    margin-top: 15px;
+    font-size: 13px;
+    text-align: center;
+}
+
+.register a {
+    color: #dd0835;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Rechte Seite */
+.right {
+    width: 60%;
+    background: #dd0835;
+    display: flex;
+
+    align-items: center;
+    color: #fff;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    padding: 60px;
+}
+.right p{
+    font-size: 7vw;
+    text-align: left;
+}
+
+
+.login-box h2{
+    font-size: 4vw;
+}
+
+
+@media (max-width: 768px) {
+    .right {
+        display: none;
+    }
+
+    .left {
+        width: 100%;
+    }
+
+
+}

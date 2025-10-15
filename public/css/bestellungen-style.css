@@ -1,0 +1,26 @@
+
+
+.Speise{
+    background-color: #dd0835;
+}
+
+.inhalt img {
+    width: 100%;
+    height: auto;
+}
+
+
+.beschreibung {
+    text-align: center;
+    padding: 10px;
+}
+
+.beschreibung h3 {
+    margin: 5px 0;
+    font-size: 1.2em;
+}
+
+.beschreibung p {
+    margin: 0;
+    font-size: 1em;
+}
