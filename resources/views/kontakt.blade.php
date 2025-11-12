@@ -13,6 +13,7 @@
 <main>
     <x-menu></x-menu>
     <h1>Hallo Das sind wir</h1>
+    <h2>In Salzburg nur die Austria</h2>
 
 
 
