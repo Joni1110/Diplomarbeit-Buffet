@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{asset('css/home-style.css')}}">
 </head>
 <body>
-<x-menu></x-menu>
+@include('components/menu')
 <main>
     <h1 id="ger">Gerichte diese Woche</h1>
 
@@ -107,6 +107,8 @@
 </main>
 
 
-<footer><x-footer></x-footer></footer>
+<footer>
+@include('components/menu')
+</footer>
 </body>
 </html>
