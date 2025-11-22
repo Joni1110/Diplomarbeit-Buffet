@@ -11,7 +11,47 @@
 <body>
 @include('components/menu')
 <main>
-    <h1 id="ger">Gerichte diese Woche</h1>
+    <h1 id="ger">Montag</h1>
+
+    <div class="container">
+
+        <div class="Speise Montag">
+            <h1>Schnitzel mit Pommes</h1>
+            <img src="images/schnitzel.jpg">
+            <div class="beschreibung">
+                <h3>€ 7,50</h3>
+                <p>Saftiges Schnitzel mit goldbraunen Pommes und Marmelade</p>
+            </div>
+        </div>
+
+        <div class="Speise Dienstag">
+            <h1>Schnitzel mit Pommes</h1>
+            <img src="images/schnitzel.jpg">
+            <div class="beschreibung">
+                <h3>€ 7,50</h3>
+                <p>Saftiges Schnitzel mit goldbraunen Pommes und Marmelade</p>
+            </div>
+        </div>
+
+        <div class="Speise Mittwoch">
+            <h1>Schnitzel mit Pommes</h1>
+            <img src="images/schnitzel.jpg">
+            <div class="beschreibung">
+                <h3>€ 7,50</h3>
+                <p>Saftiges Schnitzel mit goldbraunen Pommes und Marmelade</p>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+    <h1 id="ger">Dienstag</h1>
 
     <div class="container">
 
@@ -42,61 +82,7 @@
             </div>
         </div>
 
-        <div class="Speise Donnerstag">
-            <h1>Donnerstag</h1>
-            <img src="images/schnitzel.jpg">
-            <div class="beschreibung">
-                <h2>Schnitzel mit Pommes</h2>
-                <h3>€ 7,50</h3>
-            </div>
-        </div>
 
-    </div>
-
-
-
-
-
-
-    <h1 id="gerNaechsteWoche">Gerichte nächste Woche</h1>
-
-    <div class="container NaechsteWoche">
-
-        <div class="Speise Montag Naechste">
-            <h1>Montag</h1>
-            <img src="images/schnitzel.jpg">
-            <div class="beschreibung">
-                <h2>Schnitzel mit Pommes</h2>
-                <h3>€ 7,50</h3>
-            </div>
-        </div>
-
-        <div class="Speise Dienstag Naechste">
-            <h1>Dienstag</h1>
-            <img src="images/schnitzel.jpg">
-            <div class="beschreibung">
-                <h2>Schnitzel mit Pommes</h2>
-                <h3>€ 7,50</h3>
-            </div>
-        </div>
-
-        <div class="Speise Mittwoch Naechste">
-            <h1>Mittwoch</h1>
-            <img src="images/schnitzel.jpg">
-            <div class="beschreibung">
-                <h2>Schnitzel mit Pommes</h2>
-                <h3>€ 7,50</h3>
-            </div>
-        </div>
-
-        <div class="Speise Donnerstag Naechste">
-            <h1>Donnerstag</h1>
-            <img src="images/schnitzel.jpg">
-            <div class="beschreibung">
-                <h2>Schnitzel mit Pommes</h2>
-                <h3>€ 7,50</h3>
-            </div>
-        </div>
 
     </div>
 
@@ -108,7 +94,7 @@
 
 
 <footer>
-@include('components/menu')
+@include('components/footer')
 </footer>
 </body>
 </html>
