@@ -21,7 +21,7 @@ footer {
 
 .container{
     display: grid;
-    grid-template-columns: 20% 20% 20% 20%;
+    grid-template-columns: 23% 23% 23%;
     gap: 1vh;
 
 }
@@ -34,7 +34,6 @@ footer {
     text-align: center;
     flex-direction: column;
     border-radius: 15px;
-    margin-bottom: 60px;
     min-width: 140px;
     transition: 0.3s ease-in-out;
     flex-wrap: wrap;
@@ -60,7 +59,7 @@ footer {
     }
 /*-------------------Boxen--------------*/
 #ger{
-    font-size: min(30px, 6vh);
+    font-size: min(30px, 11vh);
     color: white;
     margin-left: 20px;
     padding: 5px;
@@ -68,8 +67,8 @@ footer {
 
 
 .Speise h1{
-
-    font-size:  3vh;
+    position: relative;
+    font-size:  4vh;
     color: #fff;
 }
 
@@ -82,14 +81,21 @@ footer {
 
 
 .Speise h3{
-    font-size: 3vh;
+    font-size: 3.3vh;
     color: #fff;
 }
 
 
 .beschreibung p{
-    font-size: 2vh;
+    font-size: 2.2vh;
     color: #fff;
+}
+
+
+#LightBulb{
+    position: absolute;
+    top: 130px;
+    right: 90px;
 }
 /*---------------Schriften----------------*/
 
@@ -97,11 +103,30 @@ footer {
 @media(max-width: 800px)
 {
     .container{
-        justify-content: center;
-        grid-template-columns: 80%;
+        display: grid;
+        grid-template-columns: 30% 30%;
+        gap: 6vh;
 
     }
 
+    .Speise{
+        width: 150px;
+    }
 
+    .Speise h1{
+        font-size: 2.6vh;
+    }
+
+    .Speise h3{
+        font-size: 2.2vh;
+    }
+
+    .Speise p{
+        font-size: 1.8vh;
+    }
+
+    .beschreibung{
+
+    }
 
 }
