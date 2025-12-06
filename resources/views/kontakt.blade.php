@@ -11,7 +11,7 @@
 </head>
 <body>
 <main>
-    <x-menu></x-menu>
+    @include('components/menu')
     <h1>Hallo Das sind wir</h1>
     <h2>In Salzburg nur die Austria</h2>
 
@@ -25,6 +25,8 @@
 
 </main>
 
-<footer><x-footer></x-footer></footer>
+<footer>
+    @include('components/footer')
+</footer>
 </body>
 </html>

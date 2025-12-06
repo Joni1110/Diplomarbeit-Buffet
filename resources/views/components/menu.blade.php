@@ -31,7 +31,6 @@
 
 
 <div class="Icons">
-    <img id="LogoSchuleKlein"src="images/Logo_Schule_KleinDunkel.png">
     <img src="images/User-IconDunkel.png">
 </div>
 

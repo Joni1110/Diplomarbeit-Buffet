@@ -10,7 +10,10 @@
     <link rel="stylesheet" href="{{asset('css/home-style.css')}}">
 </head>
 <body>
-@include('components/menu')
+<header>
+    @include('components/menu')
+
+</header>
 <main>
     <i id="LightBulb" class="fa-solid fa-lightbulb fa-2xl" style="color: #ffffff;"></i>
     <h1 id="ger">Montag</h1>
