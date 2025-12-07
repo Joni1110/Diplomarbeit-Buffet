@@ -11,6 +11,65 @@ body {
     padding: 0;
 }
 
+body.LightMode{
+    background-color: white;
+    color: black;
+}
+
+
+
+body.LightMode .Header,
+body.LightMode .navbar{
+    background-color: #f0f0f0;
+    color: black;
+}
+
+body.LightMode .LogoHeader {
+    color: black;
+}
+
+body.LightMode .navbar-links li a {
+    color: black;
+}
+
+body.LightMode .toggle-button .bar {
+    background-color: black;
+}
+
+
+
+/*-----------Nicht mehr Menu-----------------*/
+body.LightMode #ger{
+    background-color: white;
+    color: black;
+}
+body.LightMode .container
+{
+    background-color: #e2e8f0;
+}
+
+body.LightMode .Speise{
+    background-color: #dd0835;
+    color: black;
+}
+
+body.LightMode .beschreibung{
+    background-color: #444;
+}
+
+body.LightMode main {
+    background-color: #ffffff; /* heller Hintergrund */
+    color: black;              /* Textfarbe */
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -95,12 +154,16 @@ nav a:hover::after {
 }
 
 
-#LogoSchuleKlein{
-    width: 50px;
-    min-width: 44px;
+#LightBulb{
+    position: absolute;
+    right: 90px;
+
 }
 
-
+#LightBulbHellerModus{
+    position: absolute;
+    right: 90px;
+}
 
 
 ::-webkit-scrollbar {
