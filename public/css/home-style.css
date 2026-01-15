@@ -1,3 +1,6 @@
+/* ---------------------------------------------------
+   GLOBAL
+--------------------------------------------------- */
 html, body {
     height: 100%;
     margin: 0;
@@ -13,116 +16,164 @@ main {
     background-color: #222;
 }
 
-footer {
-}
-
-/*---------------Allgemeine Klassen----------------------*/
-
-
-.container{
+/* ---------------------------------------------------
+   GRID / LAYOUT
+--------------------------------------------------- */
+.container {
     display: grid;
-    grid-template-columns: 23% 23% 23%;
+    grid-template-columns: repeat(3, 23%);
     gap: 1vh;
-
 }
 
-.Speise{
+/* ---------------------------------------------------
+   SPEISE-KARTEN
+--------------------------------------------------- */
+.Speise {
     display: flex;
-    background-color: #dd0835;
-    margin-right: 25px;
-    margin-left: 25px;
-    text-align: center;
     flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    background-color: #dd0835;
+    margin: 0 25px;
     border-radius: 15px;
     min-width: 140px;
     transition: 0.3s ease-in-out;
-    flex-wrap: wrap;
 }
 
-.Speise:hover{
+.Speise:hover {
     filter: brightness(1.08);
     transform: translateY(-3px);
 }
 
+.Speise img {
+    width: 100%;
+    height: auto;
+}
 
-    .Speise img{
-        width: 100%;
-        height: auto;
-    }
+.beschreibung {
+    width: 100%;
+    background-color: #333;
+    border-radius: 0 0 15px 15px;
+}
 
-    .beschreibung{
-        width: 100%;
-        height: auto;
-        border-bottom-right-radius: 15px;
-        border-bottom-left-radius: 15px;
-        background-color: #333;
-    }
-/*-------------------Boxen--------------*/
-#ger{
-    font-size: min(30px, 11vh);
+/* ---------------------------------------------------
+   TEXT / TYPO
+--------------------------------------------------- */
+#ger {
+    font-size: min(30px, 12vh);
     color: white;
     margin-left: 20px;
     padding: 5px;
 }
 
-
-.Speise h1{
-    position: relative;
-    font-size:  4vh;
+.Speise h1,
+.Speise h2,
+.Speise h3,
+.beschreibung p {
     color: #fff;
 }
 
+.Speise h1 {
+    font-size: 4vh;
+}
 
-
-.Speise h2{
+.Speise h2 {
     font-size: 3vh;
-    color: #fff;
 }
 
-
-.Speise h3{
+.Speise h3 {
     font-size: 3.3vh;
-    color: #fff;
 }
 
-
-.beschreibung p{
+.beschreibung p {
     font-size: 2.2vh;
-    color: #fff;
 }
 
+/* ---------------------------------------------------
+   RESPONSIVE
+--------------------------------------------------- */
+@media (max-width: 650px) {
 
-
-/*---------------Schriften----------------*/
-
-
-@media(max-width: 800px)
-{
-    .container{
-        display: grid;
-        grid-template-columns: 30% 30%;
+    .container {
+        grid-template-columns: repeat(2, 30%);
         gap: 6vh;
-
     }
 
-    .Speise{
+    .Speise {
         width: 150px;
     }
 
-    .Speise h1{
+    .Speise h1 {
         font-size: 2.6vh;
     }
 
-    .Speise h3{
+    .Speise h3 {
         font-size: 2.2vh;
     }
 
-    .Speise p{
+    .Speise p {
         font-size: 1.8vh;
     }
+}
+/* ---------------------------------------------------
+   iPad Ansicht (Portrait & Landscape)
+   801px – 1024px
+--------------------------------------------------- */
+@media (min-width: 651px) and (max-width: 1024px) {
 
-    .beschreibung{
-
+    /* Grid: 2 Spalten statt 3 */
+    .container {
+        grid-template-columns: repeat(2, 38%);
+        justify-content: center;
+        gap: 4vh;
     }
 
+    /* Speise-Karten etwas größer */
+    .Speise {
+        width: 100%;
+        margin: 0 auto;
+        min-width: 200px;
+    }
+
+    /* Titel (z. B. "Montag") */
+    #ger {
+        font-size: 5vh;
+        margin-left: 10px;
+    }
+
+    /* Schriftgrößen anpassen */
+    .Speise h1 {
+        font-size: 3.2vh;
+    }
+
+    .Speise h2 {
+        font-size: 2.6vh;
+    }
+
+    .Speise h3 {
+        font-size: 2.8vh;
+    }
+
+    .beschreibung p {
+        font-size: 2.2vh;
+    }
+
+    /* Bilder */
+    .Speise img {
+        border-radius: 10px 10px 0 0;
+    }
+
+    /* Navbar / Header */
+    .LogoHeader p {
+        font-size: 2.2vh;
+    }
+
+    nav a {
+        font-size: 2.2vh;
+    }
+
+    /* Icons sichtbar, aber kleiner */
+    .Icons img {
+        width: 24px;
+    }
 }
