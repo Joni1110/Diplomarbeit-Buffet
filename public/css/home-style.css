@@ -4,6 +4,7 @@
 html, body {
     height: 100%;
     margin: 0;
+
 }
 
 body {
@@ -32,6 +33,7 @@ main {
    SPEISE-KARTEN (wie alt)
 --------------------------------------------------- */
 .Speise {
+    position: relative;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -40,20 +42,20 @@ main {
     margin: 0 25px;
     border-radius: 15px;
     min-width: 140px;
-    transition: 0.3s ease-in-out;
     overflow: hidden;
 }
 
+
 .Speise:hover {
-    filter: brightness(1.08);
-    transform: translateY(-3px);
+    /*filter: brightness(1.08);*/
+    /*transform: translateY(-3px);*/
 }
 
 /* Bild wieder wie alt (kein Crop) */
 .Speise img {
     width: 100%;
     height: auto;         /* <- wichtig: wieder auto */
-    object-fit: unset;    /* <- kein cover */
+    object-fit: fill;    /* <- kein cover */
     display: block;
 }
 
@@ -157,6 +159,32 @@ main {
 }
 .qty[type=number] {
     -moz-appearance: textfield;
+}
+
+
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(221, 8, 53, 0.76);
+    border-radius: 15px;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.4s ease-out, opacity 0.4s ease;
+    pointer-events: none;
+}
+
+
+.Speise:hover .overlay{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.fa-2xl{
+
 }
 
 /* ---------------------------------------------------

@@ -3,25 +3,23 @@
 
 
 
-.footer{
+.footer {
     display: flex;
-    background-color: #dd0835;
-    text-align: center;
     justify-content: center;
-    align-content: center;
-    padding: 20px;
+    align-items: center;
     gap: 80px;
-    bottom: 0;
+    background-color: #dd0835;
+    padding: 20px;
+    width: 100%;
 }
 
-.footer a{
-    display: flex;
+.footer a {
     color: #fff;
     text-decoration: none;
-    font-family: Raleway;
+    font-family: 'Raleway',
+    sans-serif;
     font-size: clamp(12px, 1vw, 16px);
     font-weight: bold;
-    position: relative;
     transition: transform 0.3s ease;
 }
 
@@ -31,7 +29,7 @@
 
 }
 
-footer a::after {
+.footer a::after {
     height: 3px;
     background-color: #fff;
     transition: width 0.3s ease;

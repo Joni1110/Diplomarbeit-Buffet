@@ -1,9 +1,18 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
     font-family: Raleway, sans-serif;
     background-color: #222;
     color: white;
-    margin: 0;
-    padding: 20px;
+}
+
+main {
+    flex: 1;
 }
 
 h1 {
@@ -13,6 +22,7 @@ h1 {
 }
 
 .kontakt-box {
+    width: 70%;
     max-width: 600px;
     margin: 0 auto;
     background-color: #333;
@@ -59,11 +69,4 @@ button {
 
 button:hover {
     filter: brightness(1.15);
-}
-
-
-footer{
-    position: fixed;
-    bottom: 0px;
-    width: 100%;
 }

@@ -12,7 +12,7 @@
 <header>
     @include('components/menu')
 </header>
-
+<main>
 <h1>Kontakt</h1>
 
 <div class="kontakt-box">
@@ -49,7 +49,7 @@
         <button type="submit">Nachricht senden</button>
     </form>
 </div>
-
+</main>
 <footer>
     @include('components/footer')
 </footer>

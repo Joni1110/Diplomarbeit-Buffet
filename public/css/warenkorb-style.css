@@ -1,51 +1,6 @@
-html, body {
-    height: 100%;
-    margin: 0;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-}
-
-main {
-    flex: 1;
-}
-
-
-
-
-
-body {
-    font-family: Raleway, sans-serif;
-    background-color: #222;
-    color: white;
-}
-
-h1 {
-    text-align: center;
-    color: #dd0835;
-
-}
-
-/* Messages */
-.msg {
-    width: min(900px, 95%);
-    margin: 15px auto;
-    padding: 10px 12px;
-    border-radius: 10px;
-    font-weight: 600;
-}
-
-.msg.error { background: #aa0022; }
-.msg.success { background: #1f7a1f; }
-
-/* ---------------------------------------------------
-   WARENKORB
---------------------------------------------------- */
 .cart-box {
     width: min(900px, 95%);
-    margin: 0 auto;
+    margin: 20px auto;
     background: #333;
     border-radius: 12px;
     padding: 15px;
@@ -118,6 +73,14 @@ h1 {
     font-weight: 700;
 }
 
+
+.einzelpreis{
+    display: flex;
+    float: right;
+    justify-content: flex-end;
+    text-align: right;
+}
+
 .cart-sum {
     min-width: 120px;
     text-align: right;
@@ -161,66 +124,4 @@ h1 {
     font-weight: 900;
 }
 
-/* ---------------------------------------------------
-   BESTELLUNGEN HISTORIE
---------------------------------------------------- */
-.bestellungen {
-    display: flex;
-    gap: 10px;
-    margin-top: 30px;
-    flex-wrap: wrap;
-    margin-bottom: 30px;
-    justify-content: center;
-
-}
-
-.karte {
-    background-color: #333;
-    border-radius: 10px;
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    min-width: 30%;
-
-    margin: 5px;
-
-}
-
-.karte h2 {
-    margin-top: 0;
-    color: #fff;
-}
-
-.karte p {
-    margin: 5px 0;
-    color: #ccc;
-}
-
-.preis {
-    color: #dd0835;
-    font-weight: bold;
-    font-size: 1.1rem;
-}
-
-.datum {
-    font-size: 0.9rem;
-    color: #aaa;
-}
-
-.positions {
-    margin-top: 10px;
-    padding-top: 10px;
-    border-top: 1px solid #444;
-}
-
-.pos-row {
-    display: grid;
-    grid-template-columns: 1fr auto auto;
-    gap: 10px;
-    padding: 6px 0;
-    color: #ddd;
-}
-
-.pos-name { font-weight: 700; }
-.pos-qty { color: #bbb; }
-.pos-price { font-weight: 800; }
 

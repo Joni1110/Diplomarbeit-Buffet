@@ -7,6 +7,7 @@
     <title>SmartBuffet - Home</title>
 
     <link rel="stylesheet" href="{{ asset('css/home-style.css') }}">
+
 </head>
 <body>
 
@@ -15,7 +16,7 @@
 </header>
 
 <main>
-    <h1 id="ger">Produkte</h1>
+    <h1 id="ger">Montag</h1>
 
     {{-- Meldungen --}}
     @if(session('error'))
@@ -32,34 +33,27 @@
 
     <div class="container">
         @foreach($produkte as $produkt)
-            <div class="Speise">
-                <h1>{{ $produkt->name }}</h1>
+                 <div class="Speise">
+                    <h1>{{ $produkt->name }}</h1>
+                        <img src="{{ $produkt->bild_url }}" alt="{{ $produkt->name }}">
+                     <div class="overlay">
+                         <i class="fa-solid fa-cart-shopping fa-2xl"></i>
 
-                <img src="{{ $produkt->bild_url }}" alt="{{ $produkt->name }}">
+                     </div>
+                    <div class="beschreibung">
+                        <h3>€ {{ number_format((float)$produkt->preis, 2, ',', '.') }}</h3>
+                        <p>{{ $produkt->beschreibung }}</p>
 
-                <div class="beschreibung">
-                    <h3>€ {{ number_format((float)$produkt->preis, 2, ',', '.') }}</h3>
-                    <p>{{ $produkt->beschreibung }}</p>
+                        {{-- Warenkorb Add --}}
 
-                    {{-- Warenkorb Add --}}
-                    <form method="POST" action="{{ route('cart.add') }}" class="buy-row">
-                        @csrf
-                        <input type="hidden" name="produkt_id" value="{{ $produkt->id }}">
 
-                        <input class="qty" type="number" name="menge" value="1" min="1" max="20">
-                        <button type="submit" class="btn-add">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                            In den Warenkorb
-                        </button>
-
-                    </form>
                 </div>
             </div>
         @endforeach
     </div>
 
     <div style="margin: 20px;">
-        <a href="{{ route('bestellungen') }}" style="color:#fff; text-decoration:none; font-weight:600;">
+        <a href="{{ route('warenkorb') }}" style="color:#fff; text-decoration:none; font-weight:600;">
             → Zum Warenkorb / Bestellungen
         </a>
     </div>

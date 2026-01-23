@@ -334,6 +334,49 @@ Route::get('/bestellungen', function () {
     ]);
 })->name('bestellungen');
 
+
+/*
+|--------------------------------------------------------------------------
+| Warenkorb (geschützt)
+|--------------------------------------------------------------------------
+*/
+Route::get('/warenkorb', function () {
+    if ($r = requireLogin()) return $r;
+
+    // Warenkorb laden
+    $cart = Session::get('cart', []);
+    $cartItems = [];
+    $cartTotal = 0.0;
+
+    if (!empty($cart)) {
+        $produktIds = array_keys($cart);
+        $produkte = DB::table('produkte')->whereIn('id', $produktIds)->get()->keyBy('id');
+
+        foreach ($cart as $pid => $qty) {
+            if (!isset($produkte[$pid])) continue;
+
+            $p = $produkte[$pid];
+            $preis = (float)$p->preis;
+            $summe = $preis * (int)$qty;
+
+            $cartItems[] = (object)[
+                'id' => (int)$p->id,
+                'name' => $p->name,
+                'preis' => $preis,
+                'menge' => (int)$qty,
+                'summe' => $summe,
+            ];
+
+            $cartTotal += $summe;
+        }
+    }
+
+    return view('warenkorb', [
+        'cartItems' => $cartItems,
+        'cartTotal' => $cartTotal
+    ]);
+})->name('warenkorb');
+
 /*
 |--------------------------------------------------------------------------
 | KONTAKT (geschützt) + Mail senden

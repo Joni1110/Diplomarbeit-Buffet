@@ -28,8 +28,9 @@
     <div class="Icons">
 
         <!-- Light/Dark Toggle (wie gehabt) -->
-        <i id="LightBulb" class="fa-solid fa-lightbulb fa-xl"></i>
-        <i id="LightBulbHellerModus" class="fa-regular fa-lightbulb fa-xl"></i>
+        <!--<i id="LightBulb" class="fa-solid fa-lightbulb fa-xl"></i>
+        <i id="LightBulbHellerModus" class="fa-regular fa-lightbulb fa-xl"></i> -->
+        <a href="/warenkorb"> <i onclick="" class="fa-solid fa-cart-shopping fa-xl"></i></a>
 
         <!-- USER MENU -->
         <div class="user-menu">
@@ -53,6 +54,9 @@
 </div>
 
 <script>
+
+
+
     // Burger Menu
     const toggleButton = document.querySelector('.toggle-button');
     const navbarLinks = document.querySelector('.navbar-links');
